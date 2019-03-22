@@ -123,3 +123,25 @@
     at readableAddChunk (_stream_readable.js:261:11)
     at Socket.Readable.push (_stream_readable.js:218:10)
     at TCP.onread (net.js:581:20) 
+18:38:52.749 INFO  Skip value must be non-negative, but received: -10 - MongoError: Skip value must be non-negative, but received: -10
+    at /home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:581:63
+    at authenticateStragglers (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:504:16)
+    at Connection.messageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:540:5)
+    at emitMessageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:310:10)
+    at Socket.<anonymous> (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:453:17)
+    at Socket.emit (events.js:180:13)
+    at addChunk (_stream_readable.js:274:12)
+    at readableAddChunk (_stream_readable.js:261:11)
+    at Socket.Readable.push (_stream_readable.js:218:10)
+    at TCP.onread (net.js:581:20) 
+18:50:31.356 INFO  Failed to parse: { find: "geolocations", filter: { location: { $near: { $maxDistance: 1000, $geometry: { type: "Point", coordinates: [ -23.49594530365956, -46.84319833226317 ] } } } }, projection: {}, limit: "50", returnKey: false, showRecordId: false, $db: "nest" }. 'limit' field must be numeric. - MongoError: Failed to parse: { find: "geolocations", filter: { location: { $near: { $maxDistance: 1000, $geometry: { type: "Point", coordinates: [ -23.49594530365956, -46.84319833226317 ] } } } }, projection: {}, limit: "50", returnKey: false, showRecordId: false, $db: "nest" }. 'limit' field must be numeric.
+    at /home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:581:63
+    at authenticateStragglers (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:504:16)
+    at Connection.messageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:540:5)
+    at emitMessageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:310:10)
+    at Socket.<anonymous> (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:453:17)
+    at Socket.emit (events.js:180:13)
+    at addChunk (_stream_readable.js:274:12)
+    at readableAddChunk (_stream_readable.js:261:11)
+    at Socket.Readable.push (_stream_readable.js:218:10)
+    at TCP.onread (net.js:581:20) 

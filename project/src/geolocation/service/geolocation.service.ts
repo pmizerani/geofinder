@@ -38,7 +38,7 @@ export class GeolocationService {
                     }
                 }
             }
-        }, { offset: 0, limit: 10 });
+        }, { page: (geoLocationQuery.page && geoLocationQuery.page >= 1) ? parseInt(geoLocationQuery.page.toString()) : 1, limit: geoLocationQuery.size ? parseInt(geoLocationQuery.size.toString()) : 50 });
 
         const listGeolocationInterface: GeolocationInterface[] = locationListPaginate.docs.map(geo => {
             return <GeolocationInterface>{
