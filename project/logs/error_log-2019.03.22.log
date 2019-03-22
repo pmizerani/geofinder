@@ -1,0 +1,125 @@
+14:58:41.080 INFO  $maxDistance must be a number - MongoError: $maxDistance must be a number
+    at /home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:581:63
+    at authenticateStragglers (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:504:16)
+    at Connection.messageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:540:5)
+    at emitMessageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:310:10)
+    at Socket.<anonymous> (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:453:17)
+    at Socket.emit (events.js:180:13)
+    at addChunk (_stream_readable.js:274:12)
+    at readableAddChunk (_stream_readable.js:261:11)
+    at Socket.Readable.push (_stream_readable.js:218:10)
+    at TCP.onread (net.js:581:20) 
+15:04:38.405 INFO  $maxDistance must be a number - MongoError: $maxDistance must be a number
+    at /home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:581:63
+    at authenticateStragglers (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:504:16)
+    at Connection.messageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:540:5)
+    at emitMessageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:310:10)
+    at Socket.<anonymous> (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:453:17)
+    at Socket.emit (events.js:180:13)
+    at addChunk (_stream_readable.js:274:12)
+    at readableAddChunk (_stream_readable.js:261:11)
+    at Socket.Readable.push (_stream_readable.js:218:10)
+    at TCP.onread (net.js:581:20) 
+15:05:04.371 INFO  $maxDistance must be a number - MongoError: $maxDistance must be a number
+    at /home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:581:63
+    at authenticateStragglers (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:504:16)
+    at Connection.messageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:540:5)
+    at emitMessageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:310:10)
+    at Socket.<anonymous> (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:453:17)
+    at Socket.emit (events.js:180:13)
+    at addChunk (_stream_readable.js:274:12)
+    at readableAddChunk (_stream_readable.js:261:11)
+    at Socket.Readable.push (_stream_readable.js:218:10)
+    at TCP.onread (net.js:581:20) 
+15:05:50.963 INFO  $maxDistance must be a number - MongoError: $maxDistance must be a number
+    at /home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:581:63
+    at authenticateStragglers (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:504:16)
+    at Connection.messageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:540:5)
+    at emitMessageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:310:10)
+    at Socket.<anonymous> (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:453:17)
+    at Socket.emit (events.js:180:13)
+    at addChunk (_stream_readable.js:274:12)
+    at readableAddChunk (_stream_readable.js:261:11)
+    at Socket.Readable.push (_stream_readable.js:218:10)
+    at TCP.onread (net.js:581:20) 
+15:06:03.590 INFO  $maxDistance must be a number - MongoError: $maxDistance must be a number
+    at /home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:581:63
+    at authenticateStragglers (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:504:16)
+    at Connection.messageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:540:5)
+    at emitMessageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:310:10)
+    at Socket.<anonymous> (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:453:17)
+    at Socket.emit (events.js:180:13)
+    at addChunk (_stream_readable.js:274:12)
+    at readableAddChunk (_stream_readable.js:261:11)
+    at Socket.Readable.push (_stream_readable.js:218:10)
+    at TCP.onread (net.js:581:20) 
+15:07:29.065 INFO  $maxDistance must be a number - MongoError: $maxDistance must be a number
+    at /home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:581:63
+    at authenticateStragglers (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:504:16)
+    at Connection.messageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:540:5)
+    at emitMessageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:310:10)
+    at Socket.<anonymous> (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:453:17)
+    at Socket.emit (events.js:180:13)
+    at addChunk (_stream_readable.js:274:12)
+    at readableAddChunk (_stream_readable.js:261:11)
+    at Socket.Readable.push (_stream_readable.js:218:10)
+    at TCP.onread (net.js:581:20) 
+18:13:42.199 INFO  this.geolocationModel.findAndCount is not a function - TypeError: this.geolocationModel.findAndCount is not a function
+    at GeolocationService.<anonymous> (/home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:30:58)
+    at Generator.next (<anonymous>)
+    at /home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:19:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:15:12)
+    at GeolocationService.findAll (/home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:37:16)
+    at GeolocationController.<anonymous> (/home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:32:85)
+    at Generator.next (<anonymous>)
+    at /home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:19:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:15:12)
+    at GeolocationController.findAll (/home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:40:16)
+    at /home/phelipe/Projetos/finder/project/node_modules/@nestjs/core/router/router-execution-context.js:43:29
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:182:7) 
+18:13:53.353 INFO  this.geolocationModel.findAndCount is not a function - TypeError: this.geolocationModel.findAndCount is not a function
+    at GeolocationService.<anonymous> (/home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:30:58)
+    at Generator.next (<anonymous>)
+    at /home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:19:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:15:12)
+    at GeolocationService.findAll (/home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:37:16)
+    at GeolocationController.<anonymous> (/home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:32:85)
+    at Generator.next (<anonymous>)
+    at /home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:19:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:15:12)
+    at GeolocationController.findAll (/home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:40:16)
+    at /home/phelipe/Projetos/finder/project/node_modules/@nestjs/core/router/router-execution-context.js:43:29
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:182:7) 
+18:20:46.145 INFO  this.geolocationModel.findAndCount is not a function - TypeError: this.geolocationModel.findAndCount is not a function
+    at GeolocationService.<anonymous> (/home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:30:58)
+    at Generator.next (<anonymous>)
+    at /home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:19:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:15:12)
+    at GeolocationService.findAll (/home/phelipe/Projetos/finder/project/src/geolocation/service/geolocation.service.ts:37:16)
+    at GeolocationController.<anonymous> (/home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:32:85)
+    at Generator.next (<anonymous>)
+    at /home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:19:71
+    at new Promise (<anonymous>)
+    at __awaiter (/home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:15:12)
+    at GeolocationController.findAll (/home/phelipe/Projetos/finder/project/src/geolocation/geolocation.controller.ts:40:16)
+    at /home/phelipe/Projetos/finder/project/node_modules/@nestjs/core/router/router-execution-context.js:43:29
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:182:7) 
+18:24:12.806 INFO  Skip value must be non-negative, but received: -10 - MongoError: Skip value must be non-negative, but received: -10
+    at /home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:581:63
+    at authenticateStragglers (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:504:16)
+    at Connection.messageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/pool.js:540:5)
+    at emitMessageHandler (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:310:10)
+    at Socket.<anonymous> (/home/phelipe/Projetos/finder/project/node_modules/mongodb-core/lib/connection/connection.js:453:17)
+    at Socket.emit (events.js:180:13)
+    at addChunk (_stream_readable.js:274:12)
+    at readableAddChunk (_stream_readable.js:261:11)
+    at Socket.Readable.push (_stream_readable.js:218:10)
+    at TCP.onread (net.js:581:20) 
