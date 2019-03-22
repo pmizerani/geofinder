@@ -1,9 +1,8 @@
-# Start Project in TypeScript NestJS
+# Geolocation finder in TypeScript NestJS
 Create By Phelipe Mizerani
 
 ### Features 
-* Sequelize
-* JWT (JSON Web Tokens)
+* Mongoose
 * Swagger 
 
 ### DATABASE and PORT config
