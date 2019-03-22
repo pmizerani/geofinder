@@ -15,7 +15,6 @@ export class GeolocationController {
     @Post()
     @ApiOperation({title: 'Create'})
     @ApiResponse({status: 201, description: 'Ok.'})
-    @ApiResponse({status: 403, description: 'Permission denied.'})
     @ApiResponse({status: 500, description: 'Internal Server Error.'})
     async create(@Body() createGeolocationDto: CreateGeolocationDto) {
         this.geolocationService.create(createGeolocationDto);
@@ -25,7 +24,6 @@ export class GeolocationController {
     @ApiOperation({title: 'Find all'})
     @ApiResponse({status: 200, description: 'Ok.'})
     @ApiResponse({status: 204, description: 'No content.'})
-    @ApiResponse({status: 403, description: 'Permission Denied.'})
     @ApiResponse({status: 500, description: 'Internal Server Error.'})
     @ApiImplicitQuery({name: 'size', type: number, required: true, description: 'Size'})
     @ApiImplicitQuery({name: 'page', type: number, required: true, description: 'Page - First is 1'})
