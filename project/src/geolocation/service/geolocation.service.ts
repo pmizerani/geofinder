@@ -23,9 +23,9 @@ export class GeolocationService {
      * findAll
      *
      * @param {GeolocationQueryInterface} geoLocationQuery
-     * @returns {Promise<GeolocationInterface[]>}
+     * @returns {Promise<any>}
      */
-    async findAll(geoLocationQuery: GeolocationQueryInterface): Promise<GeolocationInterface[]> {
+    async findAll(geoLocationQuery: GeolocationQueryInterface): Promise<any> {
 
 
         const locationListPaginate = await this.geolocationModel.paginate({

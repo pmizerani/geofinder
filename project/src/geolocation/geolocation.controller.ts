@@ -33,7 +33,7 @@ export class GeolocationController {
     @ApiImplicitQuery({name: 'lat', type: number, required: true, description: 'Latitude'})
     async findAll(@Query() geoLocationQuery: GeolocationQueryInterface, @Res() res: Response) {
 
-        const listResponse = <GeolocationInterface[]> await this.geolocationService.findAll(geoLocationQuery);
+        const listResponse = await this.geolocationService.findAll(geoLocationQuery);
 
         if (!listResponse || 0 === listResponse.length) res.status(HttpStatus.NO_CONTENT).send();
         else res.status(HttpStatus.OK).json(listResponse);
