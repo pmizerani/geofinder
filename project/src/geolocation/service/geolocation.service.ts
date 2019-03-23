@@ -2,11 +2,11 @@ import {Inject, Injectable} from '@nestjs/common';
 import {Model} from 'mongoose';
 import {GeolocationInterface} from '../interfaces/geolocation.interface';
 import {CreateGeolocationDto} from '../dto/create-geolocation.dto';
-import {GeolocationQueryInterface} from '../interfaces/geolocation-query.interface';
 import {ConfigService} from '../../config/config.service';
 import * as request from 'request';
 import {GeoinfoInterface} from '../interfaces/geoinfo.interface';
 import {CreatePointDto} from '../dto/create-point.dto';
+import {FindGeolocationDto} from '../dto/find-geolocation.dto';
 
 const configService = new ConfigService(`${process.env.NODE_ENV ? process.env.NODE_ENV : 'development'}.env`);
 
@@ -22,7 +22,7 @@ export class GeolocationService {
      * @param {CreateGeolocationDto} createGeolocationDto
      * @returns {Promise<GeolocationInterface>}
      */
-    async create(createGeolocationDto: CreateGeolocationDto): Promise<GeolocationInterface> {
+    async create(createGeolocationDto: CreateGeolocationDto) {
 
         const geoInfo = <GeoinfoInterface> await this.findGoogleMapsAPI(`${createGeolocationDto.address},${createGeolocationDto.number},${createGeolocationDto.neighborhood},${createGeolocationDto.city},${createGeolocationDto.state},${createGeolocationDto.country}`);
 
@@ -39,22 +39,32 @@ export class GeolocationService {
     /**
      * findAll
      *
-     * @param {GeolocationQueryInterface} geoLocationQuery
+     * @param {FindGeolocationDto} findGeolocationDto
      * @returns {Promise<any>}
      */
-    async findAll(geoLocationQuery: GeolocationQueryInterface): Promise<any> {
+    async findAll(findGeolocationDto: FindGeolocationDto) {
 
-        const locationListPaginate = await this.geolocationModel.paginate({
-            location: {
-                $near: {
-                    $maxDistance: parseInt(geoLocationQuery.distance.toString()),
-                    $geometry: {
-                        type: "Point",
-                        coordinates: [parseFloat(geoLocationQuery.lat.toString()), parseFloat(geoLocationQuery.lng.toString())]
+        let locationListPaginate;
+
+        try {
+            locationListPaginate = await this.geolocationModel.paginate({
+                location: {
+                    $near: {
+                        $maxDistance: parseInt(findGeolocationDto.distance.toString()),
+                        $geometry: {
+                            type: "Point",
+                            coordinates: [parseFloat(findGeolocationDto.lat.toString()), parseFloat(findGeolocationDto.lng.toString())]
+                        }
                     }
                 }
-            }
-        }, { page: (geoLocationQuery.page && geoLocationQuery.page >= 1) ? parseInt(geoLocationQuery.page.toString()) : 1, limit: geoLocationQuery.size ? parseInt(geoLocationQuery.size.toString()) : 50 });
+            }, {
+                page: (findGeolocationDto.page && findGeolocationDto.page >= 1) ? parseInt(findGeolocationDto.page.toString()) : 1,
+                limit: findGeolocationDto.size ? parseInt(findGeolocationDto.size.toString()) : 50
+            });
+        } catch (e) {
+            console.log(e);
+            return null;
+        }
 
         const listGeolocationInterface: GeolocationInterface[] = locationListPaginate.docs.map(geo => {
             return <GeolocationInterface>{
@@ -80,9 +90,6 @@ export class GeolocationService {
      * @returns {Promise<any>}
      */
     async findGoogleMapsAPI(address: String) {
-
-        //&address=Av.%20Tambor%C3%A9,267,Alphaville%20Industrial&language=pt-BR
-        //&latlng=-23.5035725,-46.84478619&language=pt-BR
 
         const googleUrl = `${configService.config.GOOGLE_MAPS_HOST + configService.config.GOOGLE_MAPS_PATH}?key=${configService.config.GOOGLE_MAPS_KEY}&address=${address}&language=pt-BR`;
 

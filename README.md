@@ -8,6 +8,7 @@ Create By Phelipe Mizerani
 ### DATABASE and PORT config
 * Default PORT = 3000
 * Edit files [development, test, production].env inside 'project' folder
+* Set your Google Key on the .env file
 * To use envoriment variables type on console before run the application:
 ````
 $ export NODE_ENV=development|test|production

@@ -1,7 +1,7 @@
 {
-  "name": "nest-typescript-starter",
+  "name": "geolocation-finder",
   "version": "1.0.0",
-  "description": "Nest TypeScript starter repository",
+  "description": "Geolocation Finder API",
   "license": "MIT",
   "scripts": {
     "start": "ts-node src/main.ts",

@@ -6,6 +6,10 @@ const opts = {
     dateFormat:'YYYY.MM.DD'
 };
 import * as log from 'simple-node-logger';
+import * as fs from 'fs';
+
+if (!fs.existsSync('./logs')) fs.mkdirSync('./logs');
+
 const logger = log.createRollingFileLogger( opts );
 
 export class AppLogger implements LoggerService {
