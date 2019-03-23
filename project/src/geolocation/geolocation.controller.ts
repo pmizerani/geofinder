@@ -2,10 +2,10 @@ import {Body, Controller, Get, HttpStatus, Post, Query, Res} from '@nestjs/commo
 import {ApiImplicitQuery, ApiOperation, ApiResponse, ApiUseTags} from '@nestjs/swagger';
 import {CreateGeolocationDto} from './dto/create-geolocation.dto';
 import {GeolocationService} from './service/geolocation.service';
-import {GeolocationInterface} from './interfaces/geolocation.interface';
 import {GeolocationQueryInterface} from './interfaces/geolocation-query.interface';
 import {number} from 'joi';
 import {Response} from 'express';
+import {GeolocationInterface} from './interfaces/geolocation.interface';
 
 @ApiUseTags('geolocation')
 @Controller('geolocation')
@@ -15,9 +15,13 @@ export class GeolocationController {
     @Post()
     @ApiOperation({title: 'Create'})
     @ApiResponse({status: 201, description: 'Ok.'})
+    @ApiResponse({status: 400, description: 'Bad Request.'})
     @ApiResponse({status: 500, description: 'Internal Server Error.'})
-    async create(@Body() createGeolocationDto: CreateGeolocationDto) {
-        this.geolocationService.create(createGeolocationDto);
+    async create(@Body() createGeolocationDto: CreateGeolocationDto, @Res() res: Response) {
+
+        const response = await this.geolocationService.create(createGeolocationDto);
+        if (null === response) res.status(HttpStatus.BAD_REQUEST).json({message: 'Address not found on GoogleMapsAPI.'});
+        else res.status(HttpStatus.CREATED).json(response);
     }
 
     @Get()

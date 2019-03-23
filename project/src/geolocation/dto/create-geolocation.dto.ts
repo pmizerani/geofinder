@@ -4,31 +4,30 @@ import {CreatePointDto} from './create-point.dto';
 
 export class CreateGeolocationDto {
 
-    @ApiModelProperty({type: String})
+    @ApiModelProperty({type: String, required: true})
     @IsString()
     readonly address: string;
 
-    @ApiModelProperty({type: Number})
+    @ApiModelProperty({type: Number, required: true})
     @IsNumber()
     readonly number: number;
 
-    @ApiModelProperty({type: String})
+    @ApiModelProperty({type: String, required: true})
     @IsString()
     readonly neighborhood: string;
 
-    @ApiModelProperty({type: String})
+    @ApiModelProperty({type: String, required: true})
     @IsString()
     readonly city: string;
 
-    @ApiModelProperty({type: String})
+    @ApiModelProperty({type: String, required: true})
     @IsString()
     readonly state: string;
 
-    @ApiModelProperty({type: String})
+    @ApiModelProperty({type: String, required: true})
     @IsString()
     readonly country: string;
 
-    @ApiModelProperty({ type: CreatePointDto })
-    readonly location: CreatePointDto;
+    location: CreatePointDto;
 
 }

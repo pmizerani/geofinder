@@ -1,6 +1,7 @@
 import * as dotenv from 'dotenv';
 import * as Joi from 'joi';
 import * as fs from 'fs';
+import {Injectable} from '@nestjs/common';
 
 export interface EnvConfig {
     [prop: string]: string;
@@ -36,6 +37,9 @@ export class ConfigService {
             MONGO_PASS: Joi.string().default('q1w2e3r4'),
             MONGO_DATABASE: Joi.string().default('nest'),
             MONGO_PORT: Joi.number().default(27017),
+            GOOGLE_MAPS_HOST: Joi.string().default("https://maps.googleapis.com"),
+            GOOGLE_MAPS_PATH: Joi.string().default("/maps/api/geocode/json"),
+            GOOGLE_MAPS_KEY: Joi.string().default("your_key_here"),
         });
 
         const { error, value: validatedEnvConfig } = Joi.validate(

@@ -5,10 +5,10 @@ export class CreatePointDto {
 
     @ApiModelProperty({type: String, enum: ['Point']})
     @IsString()
-    readonly type: string;
+    type: string;
 
     @ApiModelProperty({ type: [Number] })
     @IsArray()
-    readonly coordinates: [number];
+    coordinates: [number, number];
 
 }

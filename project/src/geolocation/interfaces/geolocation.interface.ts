@@ -8,5 +8,5 @@ export interface GeolocationInterface extends Document{
     readonly city: string;
     readonly state: string;
     readonly country: string;
-    readonly location: PointInterface
+    readonly location: PointInterface;
 }
