@@ -8,12 +8,11 @@ import {GeoinfoInterface} from '../interfaces/geoinfo.interface';
 import {CreatePointDto} from '../dto/create-point.dto';
 import {FindGeolocationDto} from '../dto/find-geolocation.dto';
 
-const configService = new ConfigService(`${process.env.NODE_ENV ? process.env.NODE_ENV : 'development'}.env`);
-
 @Injectable()
 export class GeolocationService {
     constructor(
-        @Inject('GEOLOCATTION_MODEL') private readonly geolocationModel: Model<GeolocationInterface>
+        @Inject('GEOLOCATTION_MODEL') private readonly geolocationModel: Model<GeolocationInterface>,
+        private readonly configService: ConfigService
     ) {}
 
     /**
@@ -91,7 +90,7 @@ export class GeolocationService {
      */
     async findGoogleMapsAPI(address: String) {
 
-        const googleUrl = `${configService.config.GOOGLE_MAPS_HOST + configService.config.GOOGLE_MAPS_PATH}?key=${configService.config.GOOGLE_MAPS_KEY}&address=${address}&language=pt-BR`;
+        const googleUrl = `${this.configService.config.GOOGLE_MAPS_HOST + this.configService.config.GOOGLE_MAPS_PATH}?key=${this.configService.config.GOOGLE_MAPS_KEY}&address=${address}&language=pt-BR`;
 
         try {
 
